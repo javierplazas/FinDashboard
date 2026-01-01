@@ -200,6 +200,7 @@ const ConceptExplorer = ({ data }) => {
                         </button>
                     </div>
 
+                    <div className="relative">
                         <div className="flex items-center border rounded-md px-3 py-2 bg-slate-50 focus-within:bg-white focus-within:ring-2 ring-blue-500">
                             <Search className="text-slate-400 mr-2" size={20} />
                             {searchType === 'category' ? (
