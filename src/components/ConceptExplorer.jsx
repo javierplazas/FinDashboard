@@ -200,26 +200,49 @@ const ConceptExplorer = ({ data }) => {
                         </button>
                     </div>
 
-                    <div className="relative">
                         <div className="flex items-center border rounded-md px-3 py-2 bg-slate-50 focus-within:bg-white focus-within:ring-2 ring-blue-500">
                             <Search className="text-slate-400 mr-2" size={20} />
-                            <input
-                                type="text"
-                                placeholder={searchType === 'concept' ? "Buscar concepto (ej: Mercadona)..." : "Buscar categoría (ej: Supermercado)..."}
-                                className="w-full bg-transparent outline-none"
-                                value={searchTerm}
-                                onChange={(e) => {
-                                    setSearchTerm(e.target.value);
-                                    setSelectedItem(null);
-                                    setIsContextualSearch(false); // Reset contextual on type
-                                    setCurrentPage(1);
-                                    setSelectedMonth(null);
-                                }}
-                                onKeyDown={handleKeyDown}
-                            />
+                            {searchType === 'category' ? (
+                                <select
+                                    className="w-full bg-transparent outline-none cursor-pointer"
+                                    value={selectedItem || ""}
+                                    onChange={(e) => {
+                                        const val = e.target.value;
+                                        if (val) {
+                                            handleSelectItem(val);
+                                        } else {
+                                            // Handle clear selection if needed
+                                            setSelectedItem(null);
+                                            setSearchTerm('');
+                                            setCurrentPage(1);
+                                            setSelectedMonth(null);
+                                        }
+                                    }}
+                                >
+                                    <option value="">Seleccionar categoría...</option>
+                                    {uniqueItems.map((item, idx) => (
+                                        <option key={idx} value={item}>{item}</option>
+                                    ))}
+                                </select>
+                            ) : (
+                                <input
+                                    type="text"
+                                    placeholder="Buscar concepto (ej: Mercadona)..."
+                                    className="w-full bg-transparent outline-none"
+                                    value={searchTerm}
+                                    onChange={(e) => {
+                                        setSearchTerm(e.target.value);
+                                        setSelectedItem(null);
+                                        setIsContextualSearch(false); // Reset contextual on type
+                                        setCurrentPage(1);
+                                        setSelectedMonth(null);
+                                    }}
+                                    onKeyDown={handleKeyDown}
+                                />
+                            )}
                         </div>
-                        {/* Autocomplete Dropdown */}
-                        {(!selectedItem && !isContextualSearch && searchTerm) && (
+                        {/* Autocomplete Dropdown (Components only) */}
+                        {(searchType === 'concept' && !selectedItem && !isContextualSearch && searchTerm) && (
                             <div className="absolute z-20 w-full bg-white border rounded-md shadow-lg mt-1 max-h-60 overflow-auto">
                                 {uniqueItems.length > 0 ? (
                                     uniqueItems.map((item, idx) => (
@@ -341,7 +364,7 @@ const ConceptExplorer = ({ data }) => {
                     </div>
                 </CardContent>
             </Card>
-        </div>
+        </div >
     );
 };
 
