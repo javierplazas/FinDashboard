@@ -132,7 +132,7 @@ function DashboardLayout() {
                 <LayoutDashboard size={20} />
               </div>
               <span className="bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                FinDashboard <span className="text-xs text-slate-400 font-normal ml-1">v1.0</span>
+                FinDashboard <span className="text-xs text-slate-400 font-normal ml-1">v{__APP_VERSION__}</span>
               </span>
             </h1>
           </div>
