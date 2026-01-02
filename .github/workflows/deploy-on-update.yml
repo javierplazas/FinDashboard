@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'public/movimientos.csv'
 
 jobs:
   build_and_deploy:

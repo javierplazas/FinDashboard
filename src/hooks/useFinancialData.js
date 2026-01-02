@@ -9,11 +9,12 @@ export const useFinancialData = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetch CSV files and XLSX
+                // Fetch CSV files and XLSX with cache busting
+                const timestamp = new Date().getTime();
                 const [responseCurrent, responseHistory, response2017] = await Promise.all([
-                    fetch('/movimientos.csv'),
-                    fetch('/movimientos - hasta 1 mayo 2022.csv'),
-                    fetch('/Movimientos 2017.xlsx')
+                    fetch(`/movimientos.csv?t=${timestamp}`),
+                    fetch(`/movimientos - hasta 1 mayo 2022.csv?t=${timestamp}`),
+                    fetch(`/Movimientos 2017.xlsx?t=${timestamp}`)
                 ]);
 
                 if (!responseCurrent.ok) throw new Error('Failed to fetch current data');
