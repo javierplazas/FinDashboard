@@ -1,0 +1,27 @@
+name: Deploy to Firebase Hosting on CSV Update
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/movimientos.csv'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JAVIERPLAZAS }}'
+          channelId: live
+          projectId: personal-findashboard  # <--- ¡IMPORTANTE: PON TU ID REAL DE FIREBASE!
