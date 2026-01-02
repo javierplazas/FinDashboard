@@ -1,5 +1,5 @@
 Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de producto,Tipo de producto,Tipo de movimiento,Categoría,Nota
-2/1/26,2/1/26,"7,50",EUR,Traspaso recibido de javier hernando plazas becerra,ING,Cuenta NARANJA,Cuenta,No computable,Traspasos y transferencias,Cuenta Naranja
+2/1/26,2/1/26,"7,50",EUR,Traspaso recibido de javier hernando plazas becerra,ING,Cuenta NARANJA,Cuenta,No computable,Traspasos y transferencias,
 2/1/26,2/1/26,"-7,50",EUR,Traspaso emitido a javier hernando plazas becerra,ING,Cuenta NÓMINA,Cuenta,No computable,Traspasos y transferencias,
 2/1/26,2/1/26,"-26,25",EUR,Recibo adeslas madrid,ING,Cuenta NÓMINA,Cuenta,Gasto,Seguro salud,
 2/1/26,,"-0,87",EUR,Compra en l0ka84 hospital ppe astur,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Restaurante,
@@ -11,7 +11,8 @@ Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de produc
 2/1/26,,"-100,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,No computable,Inversiones,
 2/1/26,,"-16,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 2/1/26,,"-3,74",EUR,Compra en l0ka84 hospital ppe astur,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Restaurante,
-2/1/26,,"-30,21",EUR,Compra en paypal *fixd,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Material deportivo,
+2/1/26,,"-30,21",EUR,Compra en paypal *fixd,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Electrónica,Dispositivo fixd para el coche
+2/1/26,2/1/26,"-50,00",EUR,Bizum enviado a natalia plazas buendia,ING,Cuenta NÓMINA,Cuenta,Gasto,Regalos,Regalo reyes nata
 1/1/26,,"-72,50",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 1/1/26,,"712,18",EUR,Pago recibo 4921074071191608,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,No computable,Tarjeta crédito,
 1/1/26,,"8,10",EUR,Pago recibo 6044770042770100,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,No computable,Tarjeta crédito,
@@ -29,13 +30,13 @@ Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de produc
 31/12/25,31/12/25,"-23,38",EUR,Recibo financ.carrefour,Kutxabank,Cuenta corriente,Cuenta,No computable,Tarjeta crédito,
 30/12/25,30/12/25,"700,00",EUR,Transferencia recibida de javier hernando plazas becerra op.net orden permanente,ING,Cuenta NÓMINA,Cuenta,No computable,Traspasos y transferencias,
 30/12/25,30/12/25,"-8,00",EUR,Recibo digi spain teleco,Kutxabank,Cuenta corriente,Cuenta,Gasto,Móvil,
-30/12/25,30/12/25,"-11,99",EUR,Recibo paypal europe s.a,Kutxabank,Cuenta corriente,Cuenta,Gasto,Servicios y productos online,
+30/12/25,30/12/25,"-11,99",EUR,Recibo paypal europe s.a,Kutxabank,Cuenta corriente,Cuenta,Gasto,Servicios y productos online,Spotify
 30/12/25,30/12/25,"-39,00",EUR,Recibo digi spain teleco,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,Gasto,Internet,
 30/12/25,,"-53,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 30/12/25,,"-10,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Regalos,
 30/12/25,,"-21,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Hogar,
 29/12/25,29/12/25,"-700,00",EUR,Op.net orden permanente,Kutxabank,Cuenta corriente,Cuenta,No computable,Traspasos y transferencias,
-29/12/25,,"-9,27",EUR,Compra en paypal *cloudflare,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Servicios y productos online,
+29/12/25,,"-9,27",EUR,Compra en paypal *cloudflare,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Servicios y productos online,Dominio web
 29/12/25,,"-17,24",EUR,Compra en asia store spain sl,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Ropa,
 29/12/25,,"-9,60",EUR,Compra en canel rolls alcala magna,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Restaurante,
 29/12/25,,"-61,08",EUR,Compra en stradivarius,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Ropa,
