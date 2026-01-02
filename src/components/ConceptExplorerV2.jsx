@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
 import { formatCurrency } from '../utils/csvParser';
-import { Search, Tag, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, Tag, FileText, ChevronLeft, ChevronRight, StickyNote } from 'lucide-react';
 
 const ITEMS_PER_PAGE = 50;
 
@@ -14,6 +14,7 @@ const ConceptExplorer = ({ data }) => {
     const [isContextualSearch, setIsContextualSearch] = useState(false);
 
     const [selectedMonth, setSelectedMonth] = useState(null);
+    const [activeNoteIndex, setActiveNoteIndex] = useState(null); // Track active note popup
 
     // Get unique items based on search type
     const uniqueItems = useMemo(() => {
@@ -127,6 +128,7 @@ const ConceptExplorer = ({ data }) => {
                 }
             });
             setCurrentPage(1); // Reset pagination
+            setActiveNoteIndex(null); // Close notes
         }
     };
 
@@ -345,6 +347,7 @@ const ConceptExplorer = ({ data }) => {
                                     <th className="px-4 py-3">Categoría</th>
                                     <th className="px-4 py-3">Tipo</th>
                                     <th className="px-4 py-3 text-right">Importe</th>
+                                    <th className="px-4 py-3 text-center">Notas</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -357,6 +360,31 @@ const ConceptExplorer = ({ data }) => {
                                         <td className="px-4 py-3 text-slate-500 text-xs">{t['Tipo de movimiento']}</td>
                                         <td className={`px-4 py-3 text-right font-medium ${t.parsedImporte > 0 ? 'text-green-600' : 'text-red-600'}`}>
                                             {formatCurrency(t.parsedImporte)}
+                                        </td>
+                                        <td className="px-4 py-3 text-center relative">
+                                            {t.Nota && (
+                                                <>
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            setActiveNoteIndex(activeNoteIndex === idx ? null : idx);
+                                                        }}
+                                                        className="text-amber-500 hover:text-amber-600 focus:outline-none transition-transform hover:scale-110"
+                                                        title="Ver nota"
+                                                    >
+                                                        <StickyNote size={18} />
+                                                    </button>
+                                                    {activeNoteIndex === idx && (
+                                                        <div className="absolute right-10 top-2 w-64 p-3 bg-amber-50 border border-amber-200 rounded-lg shadow-xl z-50 text-left">
+                                                            <div className="text-xs font-bold text-amber-800 mb-1 uppercase tracking-wide flex items-center gap-1">
+                                                                <StickyNote size={12} /> Nota
+                                                            </div>
+                                                            <p className="text-sm text-slate-700 whitespace-pre-wrap">{t.Nota}</p>
+                                                            <div className="absolute -right-2 top-4 w-4 h-4 bg-amber-50 border-t border-r border-amber-200 transform rotate-45"></div>
+                                                        </div>
+                                                    )}
+                                                </>
+                                            )}
                                         </td>
                                     </tr>
                                 ))}

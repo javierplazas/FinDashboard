@@ -137,40 +137,89 @@ function DashboardLayout() {
             </h1>
           </div>
 
-          <nav className="flex space-x-1 bg-slate-100 p-1 rounded-lg">
-            <button
-              onClick={() => setActiveTab('dashboard')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'dashboard'
-                ? 'bg-white text-blue-600 shadow-sm'
-                : 'text-slate-500 hover:text-slate-700'
-                }`}
-            >
-              <LayoutDashboard size={18} />
-              <span>Dashboard</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('explorer')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'explorer'
-                ? 'bg-white text-blue-600 shadow-sm'
-                : 'text-slate-500 hover:text-slate-700'
-                }`}
-            >
-              <Search size={18} />
-              <span>Explorador</span>
-            </button>
-          </nav>
-        </header>
+          import {signOut} from 'firebase/auth';
+          import {LayoutDashboard, Search, Loader2, Menu, LogOut} from 'lucide-react';
 
-        {/* Scrollable Content */}
-        <main className="flex-1 overflow-auto p-6">
-          <div className="max-w-7xl mx-auto">
-            {activeTab === 'dashboard' ? (
-              <Dashboard data={filteredData} />
-            ) : (
-              <ConceptExplorer data={filteredData} />
-            )}
-          </div>
-        </main>
+          // ... (imports remain)
+
+          // Main Dashboard Layout Component
+          function DashboardLayout() {
+  const {data, loading, error} = useFinancialData();
+          const [activeTab, setActiveTab] = useState('dashboard');
+          const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+          const navigate = useNavigate(); // Add navigate
+
+  const handleLogout = async () => {
+    try {
+            await signOut(auth);
+          navigate('/login');
+    } catch (error) {
+            console.error("Error logging out:", error);
+    }
+  };
+
+          // ... (rest of the component)
+
+          {/* Header */}
+          <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between shadow-sm z-10">
+            <div className="flex items-center gap-4">
+              <button className="md:hidden p-2 text-slate-600" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                <Menu size={24} />
+              </button>
+              <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white shadow-sm">
+                  <LayoutDashboard size={20} />
+                </div>
+                <span className="bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                  FinDashboard <span className="text-xs text-slate-400 font-normal ml-1">v{__APP_VERSION__}</span>
+                </span>
+              </h1>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <nav className="flex space-x-1 bg-slate-100 p-1 rounded-lg">
+                <button
+                  onClick={() => setActiveTab('dashboard')}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'dashboard'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-slate-500 hover:text-slate-700'
+                    }`}
+                >
+                  <LayoutDashboard size={18} />
+                  <span className="hidden sm:inline">Dashboard</span>
+                </button>
+                <button
+                  onClick={() => setActiveTab('explorer')}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'explorer'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-slate-500 hover:text-slate-700'
+                    }`}
+                >
+                  <Search size={18} />
+                  <span className="hidden sm:inline">Explorador</span>
+                </button>
+              </nav>
+
+              <button
+                onClick={handleLogout}
+                className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
+                title="Cerrar Sesión"
+              >
+                <LogOut size={20} />
+              </button>
+            </div>
+          </header>
+
+          {/* Scrollable Content */}
+          <main className="flex-1 overflow-auto p-6">
+            <div className="max-w-7xl mx-auto">
+              {activeTab === 'dashboard' ? (
+                <Dashboard data={filteredData} />
+              ) : (
+                <ConceptExplorer data={filteredData} />
+              )}
+            </div>
+          </main>
       </div>
 
       {/* Mobile Sidebar Overlay */}
