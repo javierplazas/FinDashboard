@@ -4,7 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import { useFinancialData } from './hooks/useFinancialData';
 import Dashboard from './components/Dashboard';
-import ConceptExplorer from './components/ConceptExplorer';
+import ConceptExplorer from './components/ConceptExplorerV2';
 import Sidebar from './components/Sidebar';
 import Login from './components/Login';
 import { LayoutDashboard, Search, Loader2, Menu } from 'lucide-react';
@@ -132,7 +132,7 @@ function DashboardLayout() {
                 <LayoutDashboard size={20} />
               </div>
               <span className="bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                FinDashboard
+                FinDashboard <span className="text-xs text-slate-400 font-normal ml-1">v1.0</span>
               </span>
             </h1>
           </div>
