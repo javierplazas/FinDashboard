@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
 import { formatCurrency } from '../utils/csvParser';
-import { Search, Tag, FileText, ChevronLeft, ChevronRight, StickyNote } from 'lucide-react';
+import { Search, Tag, FileText, ChevronLeft, ChevronRight, StickyNote, X } from 'lucide-react';
 
 const ITEMS_PER_PAGE = 50;
 
@@ -376,8 +376,19 @@ const ConceptExplorer = ({ data }) => {
                                                     </button>
                                                     {activeNoteIndex === idx && (
                                                         <div className="absolute right-10 top-2 w-64 p-3 bg-amber-50 border border-amber-200 rounded-lg shadow-xl z-50 text-left">
-                                                            <div className="text-xs font-bold text-amber-800 mb-1 uppercase tracking-wide flex items-center gap-1">
-                                                                <StickyNote size={12} /> Nota
+                                                            <div className="flex items-center justify-between mb-2 border-b border-amber-200 pb-2">
+                                                                <div className="text-xs font-bold text-amber-800 uppercase tracking-wide flex items-center gap-1">
+                                                                    <StickyNote size={12} /> Nota
+                                                                </div>
+                                                                <button
+                                                                    onClick={(e) => {
+                                                                        e.stopPropagation();
+                                                                        setActiveNoteIndex(null);
+                                                                    }}
+                                                                    className="text-amber-700 hover:text-amber-900 hover:bg-amber-100 rounded-full p-0.5 transition-colors"
+                                                                >
+                                                                    <X size={14} />
+                                                                </button>
                                                             </div>
                                                             <p className="text-sm text-slate-700 whitespace-pre-wrap">{t.Nota}</p>
                                                             <div className="absolute -right-2 top-4 w-4 h-4 bg-amber-50 border-t border-r border-amber-200 transform rotate-45"></div>
