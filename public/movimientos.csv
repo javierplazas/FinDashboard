@@ -1,8 +1,14 @@
 Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de producto,Tipo de producto,Tipo de movimiento,Categoría,Nota
+7/1/26,7/1/26,"-30,00",EUR,Traspaso a 912188683,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,No computable,Traspasos y transferencias,
+7/1/26,7/1/26,"30,00",EUR,Cuota,Kutxabank,Cuenta corriente,Cuenta,No computable,Traspasos y transferencias,
+7/1/26,7/1/26,"-40,00",EUR,Envio bizum claudia buendia cruz,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,Gasto,Estudios,Oposición claudia
+7/1/26,,"-26,69",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Farmacia,Farmacia el juncal
+7/1/26,,"-50,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 5/1/26,5/1/26,"-52,76",EUR,Recibo securitas direct,Kutxabank,Cuenta corriente,Cuenta,Gasto,Alarmas y seguridad,
 5/1/26,5/1/26,"-419,78",EUR,"Recibo volkswagen bank,",Kutxabank,Cuenta corriente,Cuenta,Gasto,Compra vehículo,
 5/1/26,5/1/26,"-53,96",EUR,Recibo canal de isabel i,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,Gasto,Agua,
 5/1/26,4/1/26,"-895,77",EUR,Cuota ptmo 853127317-6,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,Gasto,Hipoteca,
+5/1/26,,"-6,49",EUR,Pago en alcal henares - c/villam madrid,ING,Tarjeta Crédito,Tarjeta de crédito,Gasto,Gasolina,
 5/1/26,,"-47,80",EUR,Compra en mercadona av.union europe,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 5/1/26,,"-20,10",EUR,Compra en granier,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Restaurante,
 5/1/26,,"-50,68",EUR,Compra en alcal henares - via comp,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Ropa,
@@ -17,6 +23,7 @@ Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de produc
 5/1/26,,"-7,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 5/1/26,,"-11,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 5/1/26,,"-45,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Hogar,
+5/1/26,,"0,19",EUR,Abono por campaña abono shopping naranja:galp,ING,Tarjeta Crédito,Tarjeta de crédito,Gasto,Gasolina,
 4/1/26,,"-10,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 4/1/26,,"-3,70",EUR,Compra en render.com,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Servicios y productos online,
 4/1/26,,"-28,14",EUR,Compra en dismoda com distrib,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Ropa,
