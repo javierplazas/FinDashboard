@@ -1,4 +1,6 @@
 Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de producto,Tipo de producto,Tipo de movimiento,Categoría,Nota
+8/1/26,,"-3,60",EUR,Compra en ahorramas 1371 meco madri,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
+8/1/26,8/1/26,"-20,00",EUR,Recibo diocesis de madri,Kutxabank,Cuenta corriente,Cuenta,Gasto,Solidaridad,
 7/1/26,7/1/26,"-30,00",EUR,Traspaso a 912188683,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,No computable,Traspasos y transferencias,
 7/1/26,7/1/26,"30,00",EUR,Cuota,Kutxabank,Cuenta corriente,Cuenta,No computable,Traspasos y transferencias,
 7/1/26,7/1/26,"-40,00",EUR,Envio bizum claudia buendia cruz,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,Gasto,Estudios,Oposición claudia
