@@ -1,7 +1,19 @@
 Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de producto,Tipo de producto,Tipo de movimiento,Categoría,Nota
+14/1/26,,"-18,40",EUR,Compra en mercadona av.union europe,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
+14/1/26,,"-672,86",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Mantenimiento vehículo,
+13/1/26,13/1/26,"-23,99",EUR,Recibo paypal europe s.a,Kutxabank,Cuenta corriente,Cuenta,Gasto,Servicios y productos online,
+13/1/26,,"-33,22",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Hogar,
+13/1/26,,"-133,66",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Hotel,
+12/1/26,,"-5,68",EUR,Compra en fcia gonzalez alonso,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Farmacia,
+12/1/26,,"-7,69",EUR,Compra en mercadona av.union europe,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
+12/1/26,,"-6,00",EUR,Compra en laserum azuqueca,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Belleza,
+10/1/26,,"-6,19",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Hogar,Toma sofi
+10/1/26,,"-147,67",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,Toma sofi
+10/1/26,10/1/26,"-800,00",EUR,Transferencia emitida a javier hernando plazas movimiento ing,ING,Cuenta NÓMINA,Cuenta,No computable,Inversiones,
 9/1/26,9/1/26,"-877,50",EUR,Recibo asoc ntra sra sal,Kutxabank,Cuenta corriente,Cuenta,Gasto,Estudios,
 9/1/26,9/1/26,"28,00",EUR,Envio bizum regalo cris,Kutxabank,Cuenta OK Plus - Nomina Claudia,Cuenta,Ingreso,Transferencias,
 9/1/26,,"-2,00",EUR,Seitt r2,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Parking y peaje,
+9/1/26,,"-3,95",EUR,Farmacia la garena alcala de henes compra,Carrefour Pass,Tarjeta Carrefour Pass Classic,Tarjeta de crédito,Gasto,Farmacia,
 8/1/26,,"-3,60",EUR,Compra en ahorramas 1371 meco madri,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 8/1/26,8/1/26,"-20,00",EUR,Recibo diocesis de madri,Kutxabank,Cuenta corriente,Cuenta,Gasto,Solidaridad,
 8/1/26,,"-54,95",EUR,Compra en zala ndo pay,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Gasolina,
@@ -75,11 +87,6 @@ Fecha valor,Fecha de operación,Importe,Moneda,Concepto,Entidad,Nombre de produc
 30/12/25,,"-53,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 30/12/25,,"-10,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Regalos,
 30/12/25,,"-21,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Hogar,
-29/12/25,29/12/25,"-700,00",EUR,Op.net orden permanente,Kutxabank,Cuenta corriente,Cuenta,No computable,Traspasos y transferencias,
-29/12/25,,"-9,27",EUR,Compra en paypal *cloudflare,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Servicios y productos online,Dominio web
-29/12/25,,"-17,24",EUR,Compra en asia store spain sl,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Ropa,
-29/12/25,,"-9,60",EUR,Compra en canel rolls alcala magna,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Restaurante,
-29/12/25,,"-61,08",EUR,Compra en stradivarius,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Ropa,
 28/12/25,28/12/25,"-2,00",EUR,Bizum enviado a sofia plazas buendia,ING,Cuenta NÓMINA,Cuenta,Gasto,Supermercado,
 27/12/25,,"-23,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Supermercado,
 27/12/25,,"-26,00",EUR,Disposicion de efectivo en ventanillo re,Kutxabank,Tarjeta de crédito,Tarjeta de crédito,Gasto,Restaurante,
