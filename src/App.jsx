@@ -187,7 +187,7 @@ function DashboardLayout() {
             {activeTab === 'dashboard' ? (
               <Dashboard data={filteredData} />
             ) : (
-              <ConceptExplorer data={filteredData} />
+              <ConceptExplorer data={filteredData} allData={data} />
             )}
           </div>
         </main>

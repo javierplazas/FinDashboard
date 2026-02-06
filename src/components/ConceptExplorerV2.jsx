@@ -6,7 +6,7 @@ import { Search, Tag, FileText, ChevronLeft, ChevronRight, StickyNote, X } from 
 
 const ITEMS_PER_PAGE = 50;
 
-const ConceptExplorer = ({ data }) => {
+const ConceptExplorer = ({ data, allData }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedItem, setSelectedItem] = useState(null);
     const [searchType, setSearchType] = useState('concept'); // 'concept' or 'category'
@@ -18,25 +18,41 @@ const ConceptExplorer = ({ data }) => {
 
     // Get unique items based on search type
     const uniqueItems = useMemo(() => {
+        // Use allData for categories if available to show full list. For concepts, use filtered data or allData depending on need.
+        // User requested ALL categories to be available.
+        const sourceData = searchType === 'category' ? (allData || data) : data;
+
         const items = new Map();
         const field = searchType === 'concept' ? 'Concepto' : 'Categoría';
 
-        data.forEach(d => {
+        sourceData.forEach(d => {
             if (d[field]) {
                 const count = items.get(d[field]) || 0;
                 items.set(d[field], count + 1);
             }
         });
 
-        // Convert to array and sort by frequency
+        // Convert to array and sort
         const sortedItems = [...items.entries()]
-            .sort((a, b) => b[1] - a[1])
+            .sort((a, b) => {
+                // For categories, sort alphabetically for easier finding in dropdown
+                if (searchType === 'category') {
+                    return a[0].localeCompare(b[0]);
+                }
+                // For concepts, keep consistency with frequency sort
+                return b[1] - a[1];
+            })
             .map(entry => entry[0]);
 
-        if (!searchTerm) return sortedItems.slice(0, 20); // Show top 20 by default
+        // If category mode, return ALL items (no limit)
+        if (searchType === 'category') {
+            return sortedItems;
+        }
 
+        // For concepts, keep existing limit logic
+        if (!searchTerm) return sortedItems.slice(0, 20); // Show top 20 by default
         return sortedItems.filter(c => c.toLowerCase().includes(searchTerm.toLowerCase())).slice(0, 10);
-    }, [data, searchTerm, searchType]);
+    }, [data, allData, searchTerm, searchType]);
 
     // 1. First, filter by Search Term / Category (Base Data)
     const searchResults = useMemo(() => {
